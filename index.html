@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JumbledATLAS</title>
+		<link rel="shortcut icon" href="images/LogoSmall.png">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="countries.js"></script>
+		<script src="game.js"></script>
+		<script src="sectionNavigation.js"></script>
+	</head>
+
+
+	<body onload="sectionSelect('welcomeScreen');">
+		<center>
+			<div id="modal"></div>
+			<div id="howto">
+				<br>
+				Try clicking as many correct country names <br>as you can within a minute.
+				<br><br>
+				Correct Answer: +10
+				<br>
+				Wrong Answer: -10
+				<br><br>
+				<div class="optionButton" style="transform:scale(0.8);" onclick="howTo(0)">Got It</div>
+			</div>
+			<div class="section" id="welcomeScreen">
+				<img src="images/main4.png" class="mainTitle">
+				<div class="infoSection">
+					<div class="optionButton" onclick="start()">START</div>
+					<br>
+					<div class="optionButton secondButton" onclick="howTo(1)">Instructions</div>
+				</div>
+			</div>
+			
+			<div class="section" id="endScreen">
+			
+				<img src="images/main4.png" height="300px" class="mainTitle">
+				<div class="infoSection">
+					<div id="scoreResult"></div>
+					<div class="optionButton" onclick="start()">
+						Replay
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<br><br>
+			
+			<div class="section" id="arena">
+				<div id="gameStatus">
+					Time Left:<span id="timeLeft"></span>
+					<br>
+					Score: <span id="gameScore">0</span>
+					<br><br>
+				</div>
+				<table>
+					<tr>
+						<td><div class="button" id="i0" onclick="check(this.id)"></div></td>
+						<td><div class="button" id="i1" onclick="check(this.id)"></div></td>
+						<td><div class="button" id="i2" onclick="check(this.id)"></div></td>
+					</tr>
+			
+					<tr>
+						<td><div class="button" id="i3" onclick="check(this.id)"></div></td>
+						<td><div class="button" id="i4" onclick="check(this.id)"></div></td>
+						<td><div class="button" id="i5" onclick="check(this.id)"></div></td>
+					</tr>
+				</table>
+				<br><br>
+				<div class="optionButton" onclick="endGame(0)">
+					End Game
+				</div>
+			</div>
+				
+		</center>
+	</body>
+</html>
